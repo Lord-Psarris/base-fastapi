@@ -1,13 +1,13 @@
 from fastapi.openapi.docs import get_swagger_ui_oauth2_redirect_html, get_swagger_ui_html
 from utils.app_handler import create_app
 
-app = create_app(title='FMAX API', docs_url=None)
+app = create_app(title='Base API', docs_url=None)
 
 
 # default route
 @app.get('/')
 def home():
-    return 'welcome to fmax backend api'
+    return 'welcome to a base api'
 
 
 # loading up custom docs

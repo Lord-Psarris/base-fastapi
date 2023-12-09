@@ -143,14 +143,5 @@ cython_debug/
 trials.py
 
 # extra folders
-/_migrations/versions/*.py
-_optimized/
-__trash/
-__temp/
 .temp/
-
-**/*install-playbook.yml
-**/*uninstall-playbook.yml
-**/*inventory
-
-**/*.pem
+.idea/

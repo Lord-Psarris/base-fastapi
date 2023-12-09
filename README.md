@@ -1,21 +1,19 @@
-# FMAX Backend API README
+# API Name
 
-This is the backend api for the FMAX frontend client
-
+This is a brief description of th eapi
 
 ## Setup
-
 To install the necessary dependencies for the FastAPI application, follow these steps:
 
 - Make sure you have Python 3.7+ installed on your system.
-
 - Clone this repository to your local machine:
-```bash
-git clone git@ssh.dev.azure.com:v3/flapmax/Measure/measure-backend-updated
-cd measure-backend-updated
+```commandline
+mkdir folder_name
+cd folder_name
+git clone https://github.com/Lord-Psarris/base-fastapi.git
 ```
 
-- Create and setup a virtual environment (optional but recommended):
+- Create and set up a virtual environment (optional but recommended):
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -28,15 +26,18 @@ pip install -r requirements.txt
 ```
 
 ## Configuration
-
-Ensure that all the environment variables specified in the `example.env` file are set as environment variables, or in the `.env` file
+Ensure that all the environment variables specified in the `.env.example` file are set as environment variables, 
+or in the `.env` file
 
 ## Running the App
-
 To start the FastAPI application, run the following command:
 
-```bash
-uvicorn app:app --port 8000 --reload
+```commandline
+uvicorn app:app --reload
+```
+or 
+```commandline
+python app.py
 ```
 
 * app.main:app refers to the FastAPI app instance in the main.py file.

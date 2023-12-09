@@ -1,13 +1,12 @@
-from datetime import datetime, timedelta
-
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from fastapi import HTTPException, Security
-from passlib.hash import bcrypt as pwd_context
+from datetime import datetime, timedelta
+from passlib.hash import bcrypt
 
-from database import user_crud
-import configs
+from database import Users
 
 import jwt
+import configs
 
 
 class AuthHandler:
@@ -16,12 +15,12 @@ class AuthHandler:
 
     @staticmethod
     def get_password_hash(password):
-        return pwd_context.hash(password)
+        return bcrypt.hash(password)
 
     @staticmethod
     def verify_password(plain_password, hashed_password):
         # checks if passwords matches
-        return pwd_context.verify(plain_password, hashed_password)
+        return bcrypt.verify(plain_password, hashed_password)
 
     def encode_token(self, user_id):
         payload = {
@@ -48,7 +47,7 @@ class AuthHandler:
     @staticmethod
     def verify_user(user_id):
         # get user from db
-        user = user_crud.get_by_id(user_id)
+        user = Users.get_by_id(user_id)
         if user is None:
             raise HTTPException(401, detail="user doesn't exist")
 

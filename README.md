@@ -74,6 +74,6 @@ If you encounter any issues or bugs with the application, please open a new issu
 
 ## Deployment
 
-This codebase is to be deployed to the Azure app service under the `MARKETPLACE` resource group. 
+Here you can include instructions on how to make deployments. 
 
-Here is the current [live url](https://measure-backend.azurewebsites.net/docs)
+Here is the current [live url](https://google.com)

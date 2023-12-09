@@ -44,7 +44,7 @@ python app.py
 * --port 8000 sets the port number for the application (you can change it to any available port).
 * --reload enables auto-reloading of the app when code changes are made (for development).
 
-The FastAPI application will start, and you can access it by navigating to [http://localhost:8000][http://localhost:8000] in your web browser.
+The FastAPI application will start, and you can access it by navigating to [http://localhost:8000](http://localhost:8000) in your web browser.
 
 ## Contributing
 
